@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоријски Испит - Почетна</title>
+    <link rel="stylesheet" href="../css/landing.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-item active">
+                <i class="icon">👤</i>
+                <span>Профил кандидата</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='simulation.html'">
+                <i class="icon">🎯</i>
+                <span>Симулација полагања</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='question-selection.html'">
+                <i class="icon">✏️</i>
+                <span>Питања за вежбање</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" title="Sakrij/Prikaži meni">&lt;</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <h1>Профил кандидата</h1>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="profile-container">
+                <div class="info-row">
+                    <div class="info-label">ИД број</div>
+                    <div class="info-value">493837494337594</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Име</div>
+                    <div class="info-value">LUKA</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Презиме</div>
+                    <div class="info-value">KOLAKOVIĆ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('sidebarToggle');
+        toggleBtn.onclick = function() {
+            sidebar.classList.toggle('collapsed');
+            toggleBtn.innerHTML = sidebar.classList.contains('collapsed') ? '&gt;' : '&lt;';
+        };
+    </script>
+</body>
+</html> 

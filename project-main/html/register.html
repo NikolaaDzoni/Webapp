@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрација</title>
+    <link rel="stylesheet" href="../css/landing.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-item" onclick="window.location.href='landing.html'">
+                <i class="icon">👤</i>
+                <span>Профил кандидата</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='simulation.html'">
+                <i class="icon">🎯</i>
+                <span>Симулација полагања</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='question-selection.html'">
+                <i class="icon">✏️</i>
+                <span>Питања за вежбање</span>
+            </div>
+            <div class="sidebar-item active">
+                <i class="icon">📝</i>
+                <span>Регистрација</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" title="Sakrij/Prikaži meni">&lt;</button>
+        </div>
+        <div class="main-content">
+            <div class="profile-header">
+                <h1>Регистрација корисника</h1>
+            </div>
+            <form id="registerForm">
+                <div class="info-row">
+                    <label for="username">Корисничко име:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="info-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="info-row">
+                    <label for="password">Лозинка:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Региструј се</button>
+            </form>
+            <p>Већ имате налог? <a href="login.html">Пријавите се</a></p>
+        </div>
+    </div>
+    <script src="../js/register.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('sidebarToggle');
+        toggleBtn.onclick = function() {
+            sidebar.classList.toggle('collapsed');
+            toggleBtn.innerHTML = sidebar.classList.contains('collapsed') ? '&gt;' : '&lt;';
+        };
+    </script>
+</body>
+</html> 

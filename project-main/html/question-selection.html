@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Избор Питања</title>
+    <link rel="stylesheet" href="../css/question-selection.css">
+</head>
+<body>
+    <div class="container">
+        <div class="selection-container">
+            <h1>Изаберите начин приказа питања</h1>
+            
+            <!-- Question Area Selection -->
+            <div class="selection-group">
+                <div class="selection-option active">
+                    <input type="radio" id="byArea" name="displayType" checked>
+                    <label for="byArea">Приказ питања из подобласти</label>
+                </div>
+
+                <div class="selection-fields" id="areaFields">
+                    <div class="field-group">
+                        <label>Изаберите језик:</label>
+                        <select class="styled-select">
+                            <option>српски - ћирилица</option>
+                            <option>srpski - latinica</option>
+                            <option>english</option>
+                        </select>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Област питања:</label>
+                        <select class="styled-select" id="areaSelect">
+                            <option>Uvod</option>
+                            <option>[NOVO] Kompletan kurs dizajna (Figma)</option>
+                            <option>Web dizajn za developere</option>
+                            <option>HTML & CSS - Osnove</option>
+                            <option>Obavezno pogledati</option>
+                            <option>Webflow Essentials</option>
+                            <option>Pravimo novi sajt [UPDATE v3]</option>
+                            <option>Webflow dinamički sadržaj (CMS)</option>
+                            <option>Webflow eCommerce</option>
+                            <option>Webflow paketi i client as editor</option>
+                            <option>Users / Logic / Apps / Client-first</option>
+                            <option>Izrada portfolio sajta</option>
+                            <option>Hosting i transfer sajta</option>
+                            <option>Freelance Business (non-UpWork)</option>
+                            <option>Kako dobiti klijente na UpWork-u</option>
+                            <option>Dodatni saveti</option>
+                            <option>* Bonus lekcije</option>
+                        </select>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Подобласт питања:</label>
+                        <select class="styled-select" id="subAreaSelect">
+                            <option>Šta ćete naučiti</option>
+                            <option>Proces izrade sajta</option>
+                            <option>Šta je Webflow, i zašto on</option>
+                            <option>Zašto učimo Figmu i dizajn</option>
+                            <option>Kako da pratite kurs</option>
+                            <option>Pristup diskord grupi</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Number Selection -->
+            <div class="selection-group">
+                <div class="selection-option">
+                    <input type="radio" id="byNumber" name="displayType">
+                    <label for="byNumber">Приказ питања по броју</label>
+                </div>
+
+                <div class="selection-fields" id="numberFields">
+                    <div class="field-group">
+                        <label>Број питања:</label>
+                        <input type="text" class="styled-input" placeholder="Унесите број питања">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-container">
+                <div class="left-buttons">
+                    <button class="profile-btn" onclick="window.location.href='landing.html'">
+                        <i class="icon">👤</i> Профил кандидата
+                    </button>
+                </div>
+                <div class="right-buttons">
+                    <button class="exit-btn" onclick="window.location.href='landing.html'">
+                        Излаз
+                    </button>
+                    <button class="display-btn" onclick="window.location.href='index.html'">
+                        Приказ ➜
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/question-selection.js"></script>
+</body>
+</html> 

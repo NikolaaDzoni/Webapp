@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel – Unos pitanja</title>
+    <link rel="stylesheet" href="../css/landing.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-item" onclick="window.location.href='landing.html'">
+                <i class="icon">👤</i>
+                <span>Профил кандидата</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='simulation.html'">
+                <i class="icon">🎯</i>
+                <span>Симулација полагања</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='question-selection.html'">
+                <i class="icon">✏️</i>
+                <span>Питања за вежбање</span>
+            </div>
+            <div class="sidebar-item active">
+                <i class="icon">🛠️</i>
+                <span>Админ панел</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" title="Sakrij/Prikaži meni">&lt;</button>
+        </div>
+        <div class="main-content">
+            <div class="selection-container">
+                <h1>Админ панел – Унос питања</h1>
+                <form id="questionForm">
+                    <div class="field-group">
+                        <label for="section">Секција:</label>
+                        <input type="text" id="section" name="section" class="styled-input" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="lesson">Лекција:</label>
+                        <input type="text" id="lesson" name="lesson" class="styled-input" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="language">Језик:</label>
+                        <select id="language" name="language" class="styled-select" required>
+                            <option value="srpski_cirilica">Српски (ћирилица)</option>
+                            <option value="srpski_latinica">Српски (латиница)</option>
+                            <option value="engleski">Енглески</option>
+                        </select>
+                    </div>
+                    <div class="field-group">
+                        <label for="question_text">Текст питања:</label>
+                        <textarea id="question_text" name="question_text" class="styled-input" required></textarea>
+                    </div>
+                    <div class="field-group">
+                        <label for="options">Опције (одвојене зарезом):</label>
+                        <input type="text" id="options" name="options" class="styled-input" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="correct_answer">Индекс тачног одговора (0-n):</label>
+                        <input type="number" id="correct_answer" name="correct_answer" class="styled-input" min="0" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="points">Број поена:</label>
+                        <input type="number" id="points" name="points" class="styled-input" min="1" value="2" required>
+                    </div>
+                    <div class="button-container">
+                        <div class="right-buttons">
+                            <button type="submit" class="display-btn">Додај питање</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="adminMsg"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/admin.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('sidebarToggle');
+        toggleBtn.onclick = function() {
+            sidebar.classList.toggle('collapsed');
+            toggleBtn.innerHTML = sidebar.classList.contains('collapsed') ? '&gt;' : '&lt;';
+        };
+    </script>
+</body>
+</html> 

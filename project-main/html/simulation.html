@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симулација испита</title>
+    <link rel="stylesheet" href="../css/landing.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item" onclick="window.location.href='landing.html'">
+                <i class="icon">👤</i>
+                <span>Профил кандидата</span>
+            </div>
+            <div class="sidebar-item active">
+                <i class="icon">🎯</i>
+                <span>Симулација полагања</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='question-selection.html'">
+                <i class="icon">✏️</i>
+                <span>Питања за вежбање</span>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="profile-header">
+                <h1>Симулација испита</h1>
+            </div>
+            <div id="sim-timer">Преостало време: <span id="timer">120:00</span></div>
+            <div id="sim-question"></div>
+            <div id="sim-options"></div>
+            <div id="sim-nav">
+                <button id="prevSimQ">Претходно</button>
+                <button id="nextSimQ">Следеће</button>
+                <button id="finishSim">Заврши тест</button>
+            </div>
+            <div id="sim-result" style="display:none;"></div>
+        </div>
+    </div>
+    <script src="../js/simulation.js"></script>
+</body>
+</html> 

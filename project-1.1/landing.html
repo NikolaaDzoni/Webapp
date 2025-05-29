@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теоријски Испит - Почетна</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-item active">
+                <i class="icon">🏠</i>
+                <span>Почетна страница</span>
+            </div>
+            <div class="sidebar-item">
+                <i class="icon">🎯</i>
+                <span>Симулација полагања</span>
+            </div>
+            <div class="sidebar-item" onclick="window.location.href='question-selection.html'">
+                <i class="icon">✏️</i>
+                <span>Питања за вежбање</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <h1>Почетна страница</h1>
+            </div>
+
+            <!-- Countdown Clocks -->
+            <div class="countdown-container">
+                <div class="countdown-box">
+                    <h3>Тест стручно теоријских знања</h3>
+                    <div class="countdown" id="countdown1">
+                        <div class="time">
+                            <span class="days">00</span>
+                            <span class="label">дана</span>
+                        </div>
+                        <div class="time">
+                            <span class="hours">00</span>
+                            <span class="label">сати</span>
+                        </div>
+                        <div class="time">
+                            <span class="minutes">00</span>
+                            <span class="label">минута</span>
+                        </div>
+                    </div>
+                    <p class="exam-date">Датум испита: 17.06.2025.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

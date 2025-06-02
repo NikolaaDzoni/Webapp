@@ -1,94 +1,9 @@
 // Sample question data structure
 const questionData = [
     {
-        id: 1,
-        group: 'Uvod',
-        lecture: 'Šta ćete naučiti',
-        tags: ['Uvod'],
-        question: 'Koji su glavni ciljevi ovog kursa?',
-        options: [
-            'Naučiti Webflow i web dizajn od početka do kraja',
-            'Samo osnovni HTML i CSS',
-            'Samo teorija web dizajna',
-            'Samo Figma bez praktične primene'
-        ],
-        correctAnswer: 0,
-        points: 10
-    },
-    {
-        id: 2,
-        group: 'Uvod',
-        lecture: 'Proces izrade sajta',
-        question: 'Koji je pravilan redosled u procesu izrade sajta?',
-        options: [
-            'Dizajn → Razvoj → Planiranje → Testiranje',
-            'Planiranje → Dizajn → Razvoj → Testiranje',
-            'Razvoj → Planiranje → Dizajn → Testiranje',
-            'Testiranje → Razvoj → Dizajn → Planiranje'
-        ],
-        correctAnswer: 1,
-        points: 10
-    },
-    {
-        id: 3,
-        group: 'Uvod',
-        lecture: 'Šta je Webflow, i zašto on',
-        question: 'Koja je glavna prednost Webflow-a u odnosu na tradicionalno kodiranje?',
-        options: [
-            'Sporiji razvoj sajta',
-            'Vizuelno programiranje bez potrebe za pisanjem koda',
-            'Nemogućnost prilagođavanja dizajna',
-            'Ograničene mogućnosti hostinga'
-        ],
-        correctAnswer: 1,
-        points: 10
-    },
-    {
-        id: 4,
-        group: 'Uvod',
-        lecture: 'Zašto učimo Figmu i dizajn',
-        question: 'Zašto je važno učiti Figmu pre Webflow-a?',
-        options: [
-            'Figma nije povezana sa web dizajnom',
-            'Omogućava planiranje i dizajn pre implementacije',
-            'Figma je skuplja od Webflow-a',    
-            'Figma je teža za učenje od Webflow-a'
-        ],
-        correctAnswer: 1,
-        points: 10
-    },
-    {
-        id: 5,
-        group: 'Uvod',
-        lecture: 'Kako da pratite kurs',
-        question: 'Koji je preporučeni način praćenja kursa?',
-        options: [
-            'Preskakanje lekcija koje deluju poznato',
-            'Gledanje svih lekcija bez praktičnog rada',
-            'Praćenje redosleda i praktično ponavljanje pokazanog',
-            'Nasumično biranje lekcija'
-        ],
-        correctAnswer: 2,
-        points: 10
-    },
-    {
-        id: 6,
-        group: 'Uvod',
-        lecture: 'Pristup diskord grupi',
-        question: 'Koja je glavna svrha Discord grupe u kursu?',
-        options: [
-            'Samo za zabavu',
-            'Za deljenje muzike',
-            'Za međusobnu pomoć i komunikaciju sa mentorima',
-            'Za igranje igrica'
-        ],
-        correctAnswer: 2,
-        points: 10
-    },
-    {
-        id: 7, // Assign new unique IDs starting after the last existing one (6)
+        id: 7,
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
-        lecture: 'Основе', // Assuming a generic lecture name, you can change this if needed
+        lecture: 'Основе',
         tags: ['C', 'Програмирање'],
         question: 'Заокружите број испред кључне речи којом се при кодирању у програмском језику Ц, у наредби вишеструког гранања обележавају вредности за које се улази у поједине гране:',
         options: [
@@ -213,6 +128,11 @@ class QuizApp {
         // Set question text - Use innerHTML to interpret HTML tags
         this.questionText.innerHTML = question.question;
 
+        // Prikaz broja poena za trenutno pitanje
+        if (this.pointsDisplay) {
+            this.pointsDisplay.textContent = question.points;
+        }
+
         // Load image if exists
         this.imageContainer.innerHTML = question.image ? 
             `<img src="${question.image}" alt="Question Image">` : '';
@@ -226,7 +146,12 @@ class QuizApp {
                 <input type="radio" name="answer" value="${index}">
                 <label>${option}</label>
             `;
-            optionElement.addEventListener('click', () => this.selectOption(index));
+            optionElement.addEventListener('click', (e) => {
+                // Selektuj radio button pri kliku na ceo odgovor
+                const radio = optionElement.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+                this.selectOption(index);
+            });
             this.optionsContainer.appendChild(optionElement);
         });
 
@@ -341,12 +266,12 @@ class QuizApp {
         }
 
         // Populate the table with filtered questions
-        this.filteredQuestions.forEach(question => {
+        this.filteredQuestions.forEach((question, idx) => {
             const row = document.createElement('tr');
 
-            // Question Number (može biti klikabilan, ali za sada samo tekst)
+            // Question Number (prikazujemo redni broj u nizu, ne id)
             const questionCell = document.createElement('td');
-            questionCell.textContent = `Питање ${question.id}`;
+            questionCell.textContent = `Питање ${idx + 1}`;
             row.appendChild(questionCell);
 
             // Points

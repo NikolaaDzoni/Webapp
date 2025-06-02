@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Practice Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Question Header -->
+        <div class="question-header">
+            <div class="question-number">Питање: <span id="currentQuestionNumber">1</span>/<span id="totalQuestions">56</span></div>
+            <div class="points">Број поена: <span id="questionPoints">2</span></div>
+            <button id="flagQuestion" class="flag-btn">Обележите питање</button>
+        </div>
+
+        <!-- Question Section -->
+        <div class="question-container">
+            <div class="question-text">
+                <h2 id="questionText"></h2>
+            </div>
+            
+            <div id="imageContainer" class="image-container"></div>
+            
+            <div id="options" class="options-container"></div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-container">
+            <button id="prevBtn" class="nav-btn">⬅ Претходно питање</button>
+            <button id="showAnswerBtn" class="answer-btn">Прикажи одговор</button>
+            <button id="nextBtn" class="nav-btn">Следеће питање ➡</button>
+            <button id="exitBtn" class="exit-btn">Излаз</button>
+            <button id="summaryBtn" class="summary-btn">Извештај</button>
+        </div>
+    </div>
+    <!-- Summary Section (initially hidden) - sada izvan .container -->
+    <div id="summary" class="summary hidden">
+        <div class="summary-content-wrapper">
+            <h2>Резултати теста</h2>
+            <div id="summaryContent">
+                <!-- Table structure for summary -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Питање</th>
+                            <th>Број поена</th>
+                            <th>Одговорено</th>
+                            <th>Обележено</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Summary rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            <button id="backToQuizBtn" class="summary-back-btn">⬅ Назад</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

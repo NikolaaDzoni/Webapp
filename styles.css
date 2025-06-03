@@ -110,6 +110,10 @@ body {
     color: #ff0000;
 }
 
+.option .code-keyword {
+    color: #0000ff;
+}
+
 /* Styles for question 4 code blocks */
 .question-text .code-blocks-container {
     display: flex;
@@ -337,4 +341,105 @@ body {
     .nav-btn, .answer-btn, .exit-btn, .summary-btn {
         flex: 1 1 calc(50% - 0.5rem);
     }
+}
+
+.question-code {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    overflow-x: auto;
+    white-space: pre-line;
+}
+
+.option .code-string {
+    color: #ff0000;
+}
+
+.fill-in-layout {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    gap: 20px; /* Adjust as needed */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.fill-in-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between inputs in a column */
+}
+
+.code-and-options-container {
+    display: flex;
+    gap: 20px; /* Space between code block and options list */
+    flex-wrap: wrap; /* Allows them to stack on smaller screens */
+}
+
+.code-and-options-container .code-block {
+    flex: 1; /* Allows the code block to take available space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.options-list {
+    flex-basis: 150px; /* Fixed width for options list */
+    /* Add any other desired styling for the options list */
+}
+
+/* You may need to adjust padding/margins within .question-text or around these new containers */
+
+/* Styling for fill-in inputs specifically within a code block */
+.question-text .code-block .fill-in-input {
+    display: inline-block; /* Make it behave like an inline element but with block properties */
+    width: auto; /* Allow width to adjust to content, or set a min-width */
+    min-width: 40px; /* Example minimum width */
+    padding: 2px 5px; /* Smaller padding */
+    margin: 0 2px; /* Small horizontal margin to separate from surrounding text */
+    border: 1px solid #ccc; /* A subtle border */
+    border-radius: 3px; /* Slightly rounded corners */
+    background-color: #fff; /* White background to stand out from code block */
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* Match code font */
+    font-size: 0.95em; /* Slightly smaller than surrounding text perhaps */
+    text-align: center; /* Center the text */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Optional: inner shadow for depth */
+    -moz-appearance: textfield; /* Remove default number input arrows in Firefox */
+}
+
+/* Hide spin buttons for number inputs in Chrome/Safari/Edge */
+.question-text .code-block .fill-in-input::-webkit-outer-spin-button,
+.question-text .code-block .fill-in-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Adjust styling for the indicator next to the input in code blocks if needed */
+.question-text .code-block .fill-in-indicator {
+    margin-left: 2px; /* Small space after the input */
+    font-size: 0.95em; /* Match input font size */
+}
+
+/* Optional: Adjust line height if inputs affect vertical spacing */
+.question-text .code-block pre code {
+     line-height: 1.5; /* Or adjust as needed */
+}
+
+/* Ensure inline elements like input and indicator within the code block align well */
+.question-text .code-block pre {
+     white-space: pre-wrap; /* Keep wrap for code */
+     word-break: break-word; /* Break long words */
+}
+
+.question-text .code-block pre code {
+     display: block; /* Ensure code takes up necessary space */
+}
+
+.question-text .code-block pre code span {
+     /* Ensure spans within code also align */
+     vertical-align: baseline; /* Default baseline alignment */
+}
+
+.question-text .code-block .fill-in-input,
+.question-text .code-block .fill-in-indicator {
+    vertical-align: baseline; /* Align inputs and indicators with surrounding text */
 } 

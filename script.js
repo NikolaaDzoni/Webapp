@@ -704,7 +704,7 @@ const questionData = [
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
         lecture: 'Низови',
         tags: ['C', 'Програмирање', 'Низови', 'Петље'],
-        question: 'Наредбама програмског језика Ц декларисана је правоугаона матрица и три целобројне<br>променљиве:<br><div class="question-code"><span class="code-keyword">int</span> mat [10] [20]; <span class="code-keyword">int</span> x, N, M;</div><br>где N представља број врста, а М број колона правоугаоне матрице mat.<br>Допунити изразима који недостају код петље која има задатак да дуплира све елементе<br>последње колоне матрице:<br><div class="question-code"><span class="code-keyword">for</span>(x = 0; x < <input type="text" class="fill-in-input" data-correct="N"><span class="fill-in-indicator"></span>; x++)<br>&nbsp;&nbsp;mat[ <input type="text" class="fill-in-input" data-correct="x"><span class="fill-in-indicator"></span> ][ <input type="text" class="fill-in-input" data-correct="M-1"><span class="fill-in-indicator"></span> ] *= 2;</div>',
+        question: 'Наредбама програмског језика Ц декларисана је правоугаона матрица и три целобројне<br>променљиве:<br><div class="code-keyword">int mat [10] [20]; <span class="code-keyword">int</span> x, N, M;</div><br>где N представља број врста, а М број колона правоугаоне матрице mat.<br>Допунити изразима који недостају код петље која има задатак да дуплира све елементе<br>последње колоне матрице:<br><div class="code-keyword">for(x = 0; x < <input type="text" class="fill-in-input" data-correct="N">; x++)<br>&nbsp;&nbsp;mat[ <input type="text" class="fill-in-input" data-correct="x"> ][ <input type="text" class="fill-in-input" data-correct="M-1"> ] *= 2;</div>',
         options: [],
         correctAnswer: ["N", "x", "M-1"],
         points: 2,
@@ -715,6 +715,39 @@ const questionData = [
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
         lecture: 'Низови',
         tags: ['C', 'Програмирање', 'Низови', 'Петље'],
+        question: `Дата су следеће декларације: <span class="code-keyword">int</span> p[200], i, n, k;<br>
+А затим и део кода који треба да из низа <span class="code-bold">р</span> дужине <span class="code-bold">n</span>, сажимањем ИЗБАЦИ елеменат<br>
+низа са позиције <span class="code-bold">k</span>, а затим ажурира нову дужину низа.<br>
+Имајући у виду дату иницијализацију петље, у предвиђена поља унеси одговарајуће<br>
+елементе преписивањем израза из листе понуђених израза (подразумевати да су све<br>
+потребне променљиве иницијализоване):<br>
+<table style="width:100%; border-collapse: collapse;">
+    <tr>
+        <td style="vertical-align: top; padding: 0;">
+            <pre style="margin: 0; padding: 0;"><code>for (i=k; i <input type="text" class="fill-in-input" data-correct="8"> ; <input type="text" class="fill-in-input" data-correct="5"> )<br>p[<input type="text" class="fill-in-input" data-correct="3">] = p[<input type="text" class="fill-in-input" data-correct="1">] ;<br>n--;</code></pre>
+        </td>
+        <td style="vertical-align: top; padding: 0; padding-left: 20px;">
+            1. p [i + 1]<br>
+            2. p [i - 1]<br>
+            3. p [i]<br>
+            4. p [k]<br>
+            5. i ++<br>
+            6. i - -<br>
+            7. &lt; n<br>
+            8. &lt; n-1
+        </td>
+    </tr>
+</table>`,
+        options: [],
+        correctAnswer: ["8", "5", "3", "1"],
+        type: 'fill-in',
+        points: 2
+    },
+    {
+        id: 48,
+        group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
+        lecture: 'Низови',
+        tags: ['C', 'Програмирање', 'Низови', 'Петље'],
         question: 'Наредбама програмског језика Ц декларисана је правоугаона матрица и три целобројне<br>променљиве:<br><div class="question-code"><span class="code-keyword">int</span> mat [10] [20]; <span class="code-keyword">int</span> k, N, M;</div><br>где N представља број врста, а М број колона правоугаоне матрице mat.<br>Допунити изразима који недостају код петље која има задатак да дуплира све елементе<br>прве врсте матрице:<br><div class="code-block"><pre><code><span class="code-keyword">for</span>(k=0; k < <input type="text" class="fill-in-input" data-correct="M"><span class="fill-in-indicator"></span>; k++)<br>&nbsp;&nbsp;mat[ <input type="text" class="fill-in-input" data-correct="0"><span class="fill-in-indicator"></span> ][ <input type="text" class="fill-in-input" data-correct="k"><span class="fill-in-indicator"></span> ]*=2;</code></pre></div>',
         options: [],
         correctAnswer: ["M", "0", "k"],
@@ -722,7 +755,7 @@ const questionData = [
         type: 'fill-in'
     },
     {
-        id: 48,
+        id: 49,
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
         lecture: 'Оператори',
         tags: ['C', 'Програмирање', 'Оператори'],
@@ -733,7 +766,7 @@ const questionData = [
         type: 'fill-in'
     },
     {
-        id: 49,
+        id: 50,
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
         lecture: 'Низови',
         tags: ['C', 'Програмирање', 'Низови', 'Показивачи', 'Петље'],
@@ -744,7 +777,7 @@ const questionData = [
         type: 'fill-in'
     },
     {
-        id: 50,
+        id: 51,
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
         lecture: 'Низови', // Based on content
         tags: ['C', 'Програмирање', 'Низови', 'Показивачи', 'Петље'],
@@ -754,17 +787,7 @@ const questionData = [
         points: 3,
         type: 'fill-in'
     },
-    {
-        id: 51,
-        group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
-        lecture: 'Низови', // Based on content
-        tags: ['C', 'Програмирање', 'Низови', 'Показивачи', 'Петље'],
-        question: 'Дата су следеће декларације: <span class="code-keyword">int</span> p[200], i, n, k, x;<br>А затим и део кода који треба да из низа р дужине n, УБАЦИ (инсертује) елеменат x на<br>позицију k, а затим ажурира нову дужину низа.<br>Имајући у виду дату иницијализацију петље, у предвиђена поља унеси одговарајуће<br>елементе преписивањем израза из листе понуђених израза (подразумевати да су све<br>потребне променљиве иницијализоване):<br><div class="code-and-options-container"><div class="code-block"><pre><code><span class="code-keyword">for</span>(i=n; i <input type="text" class="fill-in-input" data-correct="&gt;k"><span class="fill-in-indicator"></span>; <input type="text" class="fill-in-input" data-correct="i--"><span class="fill-in-indicator"></span>)<br>&nbsp;&nbsp;<input type="text" class="fill-in-input" data-correct="p[i]"><span class="fill-in-indicator"></span> = <input type="text" class="fill-in-input" data-correct="p[i-1]"><span class="fill-in-indicator"></span>;<br><br><input type="text" class="fill-in-input" data-correct="p[k]"><span class="fill-in-indicator"></span> = x;<br><br>n++;</code></pre></div><div class="options-list">1. p [i+1]<br>2. p [i-1]<br>3. p[i]<br>4. p [k]<br>5. i ++<br>6. i - -<br>7. &gt;=k<br>8. &gt;k</div></div>',
-        options: [],
-        correctAnswer: [">k", "i--", "p[i]", "p[i-1]", "p[k]"],
-        points: 3,
-        type: 'fill-in'
-    },
+
     {
         id: 52,
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
@@ -944,7 +967,7 @@ strcpy(s1+2, s3);</pre>Одредити и на предвиђену линиј�
       <input class='fill-in-input' style='width:28px; border:none; outline:none; background:transparent; color:#2196f3; font-size:1.1em; text-align:center;' data-correct='3'>
     </span>
     <code style="color:#1a237e; font-size:1.1em;">int *a;</code>
-  </td>
+        </td>
 </tr>
 <tr>
   <td style="text-align:right; padding-right: 24px; vertical-align:middle;">2. Вектор целих бројева</td>
@@ -953,8 +976,8 @@ strcpy(s1+2, s3);</pre>Одредити и на предвиђену линиј�
       <input class='fill-in-input' style='width:28px; border:none; outline:none; background:transparent; color:#2196f3; font-size:1.1em; text-align:center;' data-correct='2'>
     </span>
     <code style="color:#1a237e; font-size:1.1em;">int a[100];</code>
-  </td>
-</tr>
+        </td>
+    </tr>
 <tr>
   <td style="text-align:right; padding-right: 24px; vertical-align:middle;">3. Показивач на цео број</td>
   <td style="white-space:nowrap;">
@@ -1099,38 +1122,38 @@ strcpy(s1+2, s3);</pre>Одредити и на предвиђену линиј�
         lecture: 'Функције',
         tags: ['функције', 'ctype.h', 'C'],
         question: `Са десне стране наведене су неке од функција библиотеке ctype.h, а са леве су дати њихови описи. Испред назива сваке од наведених функција, уписати редни број под којим је дат одговарајући опис:<br><br>
-<table style="width:100%; border-collapse: separate; border-spacing: 0 5px;">
+<table style="width:100%; border-collapse: collapse;">
     <tr>
-        <td style="vertical-align: top; width: 50%;">1. Да ли је с штампајући знак (укључујући и размак)?</td>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='6'> isspace(c)</td>
+        <td style="vertical-align: top; padding: 2px 0;">1. Да ли је с штампајући знак (укључујући и размак)?</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='6'> isspace(c)</td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">2. Да ли је с велико слово?</td>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='5'> isdigit(c)</td>
+        <td style="vertical-align: top; padding: 2px 0;">2. Да ли је с велико слово?</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='5'> isdigit(c)</td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">3. Да ли је с знак интерпункције?</td>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='7'> isalpha(c)</td>
+        <td style="vertical-align: top; padding: 2px 0;">3. Да ли је с знак интерпункције?</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='7'> isalpha(c)</td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">4. Да ли је с управљачки знак?</td>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='2'> isupper(c)</td>
+        <td style="vertical-align: top; padding: 2px 0;">4. Да ли је с управљачки знак?</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='2'> isupper(c)</td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">5. Да ли је с децимална цифра?</td>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='4'> iscntrl(c)</td>
+        <td style="vertical-align: top; padding: 2px 0;">5. Да ли је с децимална цифра?</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='4'> iscntrl(c)</td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">6. Да ли је с знак бели знак?</td>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='1'> isprint(c)</td>
+        <td style="vertical-align: top; padding: 2px 0;">6. Да ли је с знак бели знак?</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='1'> isprint(c)</td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">7. Да ли је с слово?</td>
-        <td style="vertical-align: top;"></td>
+        <td style="vertical-align: top; padding: 2px 0;">7. Да ли је с слово?</td>
+        <td style="vertical-align: top; padding: 2px 0;"></td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">8. Да ли је с хекса-децимална цифра?</td>
-        <td style="vertical-align: top;"></td>
+        <td style="vertical-align: top; padding: 2px 0;">8. Да ли је с хекса-децимална цифра?</td>
+        <td style="vertical-align: top; padding: 2px 0;"></td>
     </tr>
 </table>`,
         options: [],
@@ -1144,30 +1167,30 @@ strcpy(s1+2, s3);</pre>Одредити и на предвиђену линиј�
         lecture: 'Stringovi i pokazivači',
         tags: ['stringovi', 'pokazivači', 'C'],
         question: `На програмском језику Ц декларисане су променљиве:<br><pre><span class="code-keyword">char</span> s1[] = "Iwnt2CmyM8sagain", *sn;</pre><br>Са леве стране написани су изрази доделе вредности стрингу <span class="code-bold">sn</span>, а са десне стране понуђене су вредности стринга <span class="code-bold">sn</span>. На линију написати редни број под којим је наведена вредност стринга <span class="code-bold">sn</span> која се добија извршењем одговарајућег израза:<br><br>
-<table style="width:100%; border-collapse: separate; border-spacing: 0 5px;">
+<table style="width:100%; border-collapse: collapse;">
     <tr>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='4'> sn=strrchr(s1, 'a')-1;</td>
-        <td style="vertical-align: top;">1. NULL</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='4'> sn=strrchr(s1, 'a')-1;</td>
+        <td style="vertical-align: top; padding: 2px 0;">1. NULL</td>
     </tr>
     <tr>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='2'> sn=strrchr(s1, 'a')+1;</td>
-        <td style="vertical-align: top;">2. "in"</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='2'> sn=strrchr(s1, 'a')+1;</td>
+        <td style="vertical-align: top; padding: 2px 0;">2. "in"</td>
     </tr>
     <tr>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='6'> sn=strstr(s1, "my");</td>
-        <td style="vertical-align: top;">3. "ain"</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='6'> sn=strstr(s1, "my");</td>
+        <td style="vertical-align: top; padding: 2px 0;">3. "ain"</td>
     </tr>
     <tr>
-        <td style="vertical-align: top;"><input class='fill-in-input' size='1' data-correct='1'> sn=strstr(s1, "T2");</td>
-        <td style="vertical-align: top;">4. "gain"</td>
+        <td style="vertical-align: top; padding: 2px 0;"><input class='fill-in-input' size='1' data-correct='1'> sn=strstr(s1, "T2");</td>
+        <td style="vertical-align: top; padding: 2px 0;">4. "gain"</td>
     </tr>
     <tr>
-        <td style="vertical-align: top;"></td>
-        <td style="vertical-align: top;">5. "sagain"</td>
+        <td style="vertical-align: top; padding: 2px 0;"></td>
+        <td style="vertical-align: top; padding: 2px 0;">5. "sagain"</td>
     </tr>
     <tr>
-        <td style="vertical-align: top;"></td>
-        <td style="vertical-align: top;">6. "myM8sagain"</td>
+        <td style="vertical-align: top; padding: 2px 0;"></td>
+        <td style="vertical-align: top; padding: 2px 0;">6. "myM8sagain"</td>
     </tr>
 </table>`,
         options: [],

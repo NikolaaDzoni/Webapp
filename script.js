@@ -710,38 +710,17 @@ const questionData = [
         points: 2,
         type: 'fill-in'
     },
+    
     {
         id: 47,
         group: 'ПРОГРАМИРАЊЕ – ПРОГРАМСКИ ЈЕЗИК C',
         lecture: 'Низови',
         tags: ['C', 'Програмирање', 'Низови', 'Петље'],
-        question: `Дата су следеће декларације: <span class="code-keyword">int</span> p[200], i, n, k;<br>
-А затим и део кода који треба да из низа <span class="code-bold">р</span> дужине <span class="code-bold">n</span>, сажимањем ИЗБАЦИ елеменат<br>
-низа са позиције <span class="code-bold">k</span>, а затим ажурира нову дужину низа.<br>
-Имајући у виду дату иницијализацију петље, у предвиђена поља унеси одговарајуће<br>
-елементе преписивањем израза из листе понуђених израза (подразумевати да су све<br>
-потребне променљиве иницијализоване):<br>
-<table style="width:100%; border-collapse: collapse;">
-    <tr>
-        <td style="vertical-align: top; padding: 0;">
-            <pre style="margin: 0; padding: 0;"><code>for (i=k; i <input type="text" class="fill-in-input" data-correct="8"> ; <input type="text" class="fill-in-input" data-correct="5"> )<br>p[<input type="text" class="fill-in-input" data-correct="3">] = p[<input type="text" class="fill-in-input" data-correct="1">] ;<br>n--;</code></pre>
-        </td>
-        <td style="vertical-align: top; padding: 0; padding-left: 20px;">
-            1. p [i + 1]<br>
-            2. p [i - 1]<br>
-            3. p [i]<br>
-            4. p [k]<br>
-            5. i ++<br>
-            6. i - -<br>
-            7. &lt; n<br>
-            8. &lt; n-1
-        </td>
-    </tr>
-</table>`,
+        question: 'Дата су следеће декларације: <span class="code-keyword">int</span> p[200], i, n, k;<br><br>А затим и део кода који треба да из низа р дужине n, сажимањем <span class="code-bold">ИЗБАЦИ</span> елеменат низа са позиције k, а затим ажурира нову дужину низа.<br><br>Имајући у виду дату иницијализацију петље, у предвиђена поља унеси одговарајуће<br>елементе преписивањем израза из листе понуђених израза (подразумевати да су све<br>потребне променљиве иницијализоване):<br><div class="code-and-options-container"><div class="code-block"><pre><code><span class="code-keyword">for</span>(i=k; i <input type="text" class="fill-in-input" data-correct="&lt;n-1">; <input type="text" class="fill-in-input" data-correct="i++">)<br>&nbsp;&nbsp;<input type="text" class="fill-in-input" data-correct="p[i]"> = <input type="text" class="fill-in-input" data-correct="p[i+1]"> ;<br><br>n--;</code></pre></div><div class="options-list">1. p [i+1]<br>2. p [i-1]<br>3. p [i]<br>4. p [k]<br>5. i ++<br>6. i - -<br>7. &lt;n<br>8. &lt;n-1</div></div>',
         options: [],
-        correctAnswer: ["8", "5", "3", "1"],
-        type: 'fill-in',
-        points: 2
+        correctAnswer: ["<n-1", "i++", "p[i]", "p[i+1]"],
+        points: 3,
+        type: 'fill-in'
     },
     {
         id: 48,
